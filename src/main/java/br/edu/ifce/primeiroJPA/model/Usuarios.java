@@ -5,10 +5,12 @@ import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -31,6 +33,10 @@ public class Usuarios {
 	
 	private String password;
 	
+	private Boolean status;
+	
+	private Long ira;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Endereco endereco;
 	
@@ -40,11 +46,15 @@ public class Usuarios {
 	@Transient
 	private Integer idade;
 	
+
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Telefone> telefone;
 	
 	@ManyToOne
 	private Sede sede;
+	
+	@ManyToMany
+	private List<Disciplinas> disciplina;
 
 	public Long getId() {
 		return id;
@@ -117,8 +127,28 @@ public class Usuarios {
 	public void setSede(Sede sede) {
 		this.sede = sede;
 	}
-	
-	
-	
-	
+
+	public List<Disciplinas> getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(List<Disciplinas> disciplina) {
+		this.disciplina = disciplina;
+	}
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
+
+	public Long getIra() {
+		return ira;
+	}
+
+	public void setIra(Long ira) {
+		this.ira = ira;
+	}
 }
