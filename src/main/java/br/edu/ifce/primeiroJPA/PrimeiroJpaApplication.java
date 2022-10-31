@@ -1,5 +1,6 @@
 package br.edu.ifce.primeiroJPA;
 
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -98,6 +99,9 @@ public class PrimeiroJpaApplication implements CommandLineRunner {
 //		  usuarios.save(user);
 		// Usuarios user = usuarios.findByEmail("fulano@gmail.com").get();
 		// System.out.println(user.getNome());
+		
+	
+
 
 	}
 }

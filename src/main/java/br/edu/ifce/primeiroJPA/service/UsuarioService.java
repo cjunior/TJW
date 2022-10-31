@@ -1,5 +1,7 @@
 package br.edu.ifce.primeiroJPA.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,10 @@ public class UsuarioService {
 		// codigo para persistir a foto do usuário
 		// tabelas diferentes
 		return repository.findById(id).get();
+	}
+	
+	public List<Usuarios> buscarTodosUsuarios(){
+		return repository.findAll();
 	}
 	
 }
