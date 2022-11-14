@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt"  xmlns="http://www.w3.org/1999/xhtml"
+							xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Spring-Boot Básico</title>
     <meta charset="UTF-8"/>
@@ -64,12 +65,23 @@
 	        </nav>
 	
 	        <div class="container" id="cadastro">
-	            <form action="/alunos/salvar" method="POST">
+	            <form th:action="@{/alunos/salvar}" method="POST"  th:object="${aluno}">
 	                <div class="form-row">
 	                    <div class="form-group col-md-6">
 	                        <label for="nome">Nome do Aluno</label>
 	                        <input type="text" class="form-control" id="nome"
-	                               placeholder="Nome Aluno" autofocus="autofocus" name="nome" value=""/>
+	                               placeholder="Nome Aluno" autofocus="autofocus" name="nome" th:field="*{nome}"/>
+	                    </div>
+	                    <div class="form-group col-md-6">
+	                        <label for="email">Email do aluno</label>
+	                        <input type="text" class="form-control" id="nome"
+	                               placeholder="Email do aluno" autofocus="autofocus" name="email" th:field="*{email}"/>
+	                    </div>
+	                    
+	                    <div class="form-group col-md-6">
+	                        <label for="nome">Senha</label>
+	                        <input type="text" class="form-control" id="nome"
+	                               placeholder="Senha do aluno" autofocus="autofocus" name="nome" th:field="*{password}"/>
 	                    </div>
 	                </div>
 	                <input type="hidden" id="id" name="id" value=""/>

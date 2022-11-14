@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.edu.ifce.primeiroJPA.model.Usuarios;
+import br.edu.ifce.primeiroJPA.model.Aluno;
 import br.edu.ifce.primeiroJPA.repositorio.UsuarioRepository;
 
 @Service
@@ -17,15 +17,19 @@ public class UsuarioService {
 	UsuarioRepository repository;
 	
 	@Transactional
-	public Usuarios buscarUsuarios(Long id) {
+	public Aluno buscarUsuarios(Long id) {
 		// codigo para persistir usuario
 		// codigo para persistir a foto do usuário
 		// tabelas diferentes
 		return repository.findById(id).get();
 	}
 	
-	public List<Usuarios> buscarTodosUsuarios(){
+	public List<Aluno> buscarTodosUsuarios(){
 		return repository.findAll();
+	}
+	
+	public void salvar (Aluno a) {
+		repository.save(a);
 	}
 	
 }

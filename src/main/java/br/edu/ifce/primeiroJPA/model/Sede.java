@@ -20,7 +20,7 @@ public class Sede {
 	private String diretor;
 	
 	@OneToMany(mappedBy = "sede")
-	private List<Usuarios> usuarios;
+	private List<Aluno> usuarios;
 	
 	public Long getId() {
 		return id;
@@ -46,10 +46,10 @@ public class Sede {
 	public void setDiretor(String diretor) {
 		this.diretor = diretor;
 	}
-	public List<Usuarios> getUsuarios() {
+	public List<Aluno> getUsuarios() {
 		return usuarios;
 	}
-	public void setUsuarios(List<Usuarios> usuarios) {
+	public void setUsuarios(List<Aluno> usuarios) {
 		this.usuarios = usuarios;
 	}
 	

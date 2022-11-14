@@ -22,7 +22,7 @@ import javax.persistence.Transient;
 
 @Entity
 @Table (name = "tbl_usuarios")
-public class Usuarios {
+public class Aluno {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

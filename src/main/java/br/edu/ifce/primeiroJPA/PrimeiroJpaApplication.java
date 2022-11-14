@@ -15,7 +15,7 @@ import br.edu.ifce.primeiroJPA.model.Disciplinas;
 import br.edu.ifce.primeiroJPA.model.Endereco;
 import br.edu.ifce.primeiroJPA.model.Sede;
 import br.edu.ifce.primeiroJPA.model.Telefone;
-import br.edu.ifce.primeiroJPA.model.Usuarios;
+import br.edu.ifce.primeiroJPA.model.Aluno;
 import br.edu.ifce.primeiroJPA.repositorio.DisciplinaRepository;
 import br.edu.ifce.primeiroJPA.repositorio.EnderecoRepository;
 import br.edu.ifce.primeiroJPA.repositorio.SedeRepository;

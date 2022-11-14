@@ -22,7 +22,7 @@ public class Endereco {
 	private String cep;
 	
 	@OneToOne(mappedBy = "endereco")
-	private Usuarios usuario;
+	private Aluno usuario;
 
 	public String getLogradouro() {
 		return logradouro;
@@ -56,11 +56,11 @@ public class Endereco {
 		this.id = id;
 	}
 
-	public Usuarios getUsuario() {
+	public Aluno getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(Usuarios usuario) {
+	public void setUsuario(Aluno usuario) {
 		this.usuario = usuario;
 	}
 	
