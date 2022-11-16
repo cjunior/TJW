@@ -15,8 +15,7 @@ public class HomeController {
 	
 	@GetMapping({"/{id}"})
 	public String home(@PathVariable(value = "id") Long id) {
-		Aluno usuario = service.buscarUsuarios(id);
-		System.out.println(usuario.getNome());
+		Aluno usuario = service.buscarAluno(id);
 		return "index";
 	}
 }

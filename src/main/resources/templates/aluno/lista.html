@@ -87,15 +87,17 @@
 							<tr th:each="usuario: ${usuarios}">
 								<td th:text = "${usuario.id}"></td>
 								<td th:text = "${usuario.nome}"></td>
-								<td colspan="2"><a class="btn btn-info btn-sm"
-									href="/alunos/editar/3" role="button"> <span
+								<td colspan="2">
+								
+								<a class="btn btn-info btn-sm"
+									th:href="@{/alunos/editar/{id} (id=${usuario.id})}" role="button"> <span
 										class="oi oi-brush" title="Editar" aria-hidden="true"></span>
 								</a>
-									<button id="btn_alunos/excluir/3" type="button"
-										class="btn btn-danger btn-sm">
-										<span class="oi oi-circle-x" title="Exclusão desabilitada"
+								
+								<a class="btn btn-danger btn-sm"
+									th:href="@{/alunos/excluir/{id} (id=${usuario.id})}" role="button"><span class="oi oi-circle-x" title="Exclusão desabilitada"
 											aria-hidden="true"></span>
-									</button></td>
+								</a>
 							</tr>
 						</tbody>
 					</table>

@@ -46,57 +46,56 @@ public class PrimeiroJpaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		/*
-		 * Sede s1 = new Sede(); s1.setDiretor("Corneli Jr"); s1.setCidade("Maracanaú");
-		 * s1.setNome("Escola ABC"); sedes.save(s1);
-		 * 
-		 * Disciplinas d1 = new Disciplinas(); d1.setNome("tjw");
-		 * d1.setNomeProfessor("Corneli Jr"); d1.setCh("80");
-		 * 
-		 * Disciplinas d2 = new Disciplinas(); d2.setNome("Sistemas Distribuídos");
-		 * d2.setNomeProfessor("Fulano de tal"); d2.setCh("80");
-		 * 
-		 * disciplinas.save(d1); disciplinas.save(d2);
-		 */
+		
+		  Sede s1 = new Sede(); s1.setDiretor("Corneli Jr"); s1.setCidade("Maracanaú");
+		  s1.setNome("Escola ABC"); 
+		  
+		  Disciplinas d1 = new Disciplinas(); d1.setNome("tjw");
+		  d1.setNomeProfessor("Corneli Jr"); d1.setCh("80");
+		  
+		  Disciplinas d2 = new Disciplinas(); d2.setNome("Sistemas Distribuídos");
+		  d2.setNomeProfessor("Fulano de tal"); d2.setCh("80");
+		  
+		  disciplinas.save(d1); disciplinas.save(d2);
+		 
 
-//		Sede s1 = sedes.findById((long) 1).get();
-//		
-//
-//		
-//		  Usuarios user = new Usuarios();
-//		  user.setNome("Beltrano de tal");
-//		  user.setEmail("beltrano@gmail.com");
-//		  user.setPassword("123456");
-//		  Calendar dt = Calendar.getInstance();
-//		  dt.set(2020, 10, 10); user.setDt_nascimento(dt);
-//		  
-//		  Endereco e = new Endereco(); e.setBairro("Jereissati I");
-//		  e.setCep("00000-000"); 
-//		  e.setLogradouro("Rua II");
-//		  user.setEndereco(e);
-//		  user.setSede(s1);
-//		  
-//		  List<Telefone> phone = new ArrayList<Telefone>();
-//		  
-//		  Telefone t1 = new Telefone();
-//		  t1.setIswpp(true); 
-//		  t1.setNumero("85999999999");
-//		  t1.setTipo("celular"); 
-//		  phone.add(t1);
-//		  user.setTelefone(phone);
-//		  
-//		 
-//		  Disciplinas d1 = disciplinas.findById((long) 2).get();
-//		  Disciplinas d2 = disciplinas.findById((long) 3).get();
-//		  
-//		  List<Disciplinas> d = new ArrayList<Disciplinas>();
-//		  d.add(d1);
-//		  d.add(d2);
-//		  
-//		  user.setDisciplina(d);
-//		  
-//		  
-//		  usuarios.save(user);
+		
+		
+
+		
+		  Aluno user = new Aluno();
+		  user.setNome("Beltrano de tal");
+	  user.setEmail("beltrano@gmail.com");
+		  user.setPassword("123456");
+		  Calendar dt = Calendar.getInstance();
+		  dt.set(2020, 10, 10); user.setDt_nascimento(dt);
+		  
+		  Endereco e = new Endereco(); e.setBairro("Jereissati I");
+		  e.setCep("00000-000"); 
+	  e.setLogradouro("Rua II");
+	  user.setEndereco(e);
+		  user.setSede(s1);
+		  
+	  List<Telefone> phone = new ArrayList<Telefone>();
+	  
+	  Telefone t1 = new Telefone();
+	  t1.setIswpp(true); 
+	  t1.setNumero("85999999999");
+	  t1.setTipo("celular"); 
+	  phone.add(t1);
+	  user.setTelefone(phone);
+	  
+	 
+	 
+	  
+		  List<Disciplinas> d = new ArrayList<Disciplinas>();
+		  d.add(d1);
+		  d.add(d2);
+		  
+		//  user.setDisciplina(d);
+  
+		  
+		  usuarios.save(user);
 		// Usuarios user = usuarios.findByEmail("fulano@gmail.com").get();
 		// System.out.println(user.getNome());
 		

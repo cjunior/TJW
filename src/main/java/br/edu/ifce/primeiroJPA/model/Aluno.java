@@ -50,11 +50,11 @@ public class Aluno {
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Telefone> telefone;
 	
-	@ManyToOne
+	@ManyToOne (cascade = CascadeType.ALL)
 	private Sede sede;
 	
-	@ManyToMany
-	private List<Disciplinas> disciplina;
+///	@ManyToMany(cascade = CascadeType.PERSIST)
+//	private List<Disciplinas> disciplina;
 
 	public Long getId() {
 		return id;
@@ -128,13 +128,12 @@ public class Aluno {
 		this.sede = sede;
 	}
 
-	public List<Disciplinas> getDisciplina() {
-		return disciplina;
-	}
-
-	public void setDisciplina(List<Disciplinas> disciplina) {
-		this.disciplina = disciplina;
-	}
+	/*
+	 * public List<Disciplinas> getDisciplina() { return disciplina; }
+	 * 
+	 * public void setDisciplina(List<Disciplinas> disciplina) { this.disciplina =
+	 * disciplina; }
+	 */
 
 	public Boolean getStatus() {
 		return status;

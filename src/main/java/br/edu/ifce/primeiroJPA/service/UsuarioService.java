@@ -17,11 +17,15 @@ public class UsuarioService {
 	UsuarioRepository repository;
 	
 	@Transactional
-	public Aluno buscarUsuarios(Long id) {
+	public Aluno buscarAluno(Long id) {
 		// codigo para persistir usuario
 		// codigo para persistir a foto do usuário
 		// tabelas diferentes
 		return repository.findById(id).get();
+	}
+	
+	public void excluir(Aluno a) {
+		repository.delete(a);
 	}
 	
 	public List<Aluno> buscarTodosUsuarios(){
@@ -31,5 +35,11 @@ public class UsuarioService {
 	public void salvar (Aluno a) {
 		repository.save(a);
 	}
+	
+	public void editar(Aluno a) {
+		repository.save(a);
+	}
+	
+	
 	
 }

@@ -65,7 +65,7 @@
 	        </nav>
 	
 	        <div class="container" id="cadastro">
-	            <form th:action="@{/alunos/salvar}" method="POST"  th:object="${aluno}">
+	            <form th:action="${aluno.id == null} ? @{/alunos/salvar} : @{/alunos/editar}" method="POST"  th:object="${aluno}">
 	                <div class="form-row">
 	                    <div class="form-group col-md-6">
 	                        <label for="nome">Nome do Aluno</label>
