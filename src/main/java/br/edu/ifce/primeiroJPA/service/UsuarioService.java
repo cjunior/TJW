@@ -40,6 +40,9 @@ public class UsuarioService {
 		repository.save(a);
 	}
 	
+	public Aluno buscarLogin(String username) {
+		return repository.buscarAluno(username);
+	}
 	
 	
 }
